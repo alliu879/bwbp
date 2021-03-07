@@ -25,8 +25,8 @@ const Layout: React.FunctionComponent<Props> = ({
             </a>
           </Link>
           <div className={styles.nav}>
-            <Link href="/">
-              <a className={styles.link}>Map</a>
+            <Link href="/about">
+              <a className={styles.link}>About</a>
             </Link>
           </div>
         </nav>
