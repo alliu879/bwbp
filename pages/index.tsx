@@ -5,26 +5,32 @@ import {
   Typography,
   CardActionArea,
 } from '@material-ui/core';
+import { GetServerSideProps } from 'next';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
+import { Organization } from '../interfaces/organization';
 
-const Home: React.FC = () => {
+type HomeProps = {
+  orgs: Organization[];
+};
+
+const Home: React.FC<HomeProps> = ({ orgs }) => {
   const router = useRouter();
 
-  const orgs = [
-    {
-      id: 0,
-      name: 'Blueprint',
-      organizationType: 'National',
-      workType: 'Direct Service',
-    },
-    {
-      id: 1,
-      name: 'Redprint',
-      organizationType: 'Local',
-      workType: 'Nothing',
-    },
-  ];
+  // const orgs = [
+  //   {
+  //     id: 0,
+  //     name: 'Blueprint',
+  //     organizationType: 'National',
+  //     workType: 'Direct Service',
+  //   },
+  //   {
+  //     id: 1,
+  //     name: 'Redprint',
+  //     organizationType: 'Local',
+  //     workType: 'Nothing',
+  //   },
+  // ];
 
   return (
     <Layout>
@@ -62,3 +68,20 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    const resp = await fetch('https://next-js-ws.glitch.me/orgs');
+    const orgs = await resp.json();
+    if (!orgs) {
+      return {
+        notFound: true,
+      };
+    }
+    return {
+      props: { orgs },
+    };
+  } catch (err) {
+    return { props: { errors: err.message } };
+  }
+};

@@ -1,4 +1,5 @@
 export type Organization = {
+  id?: number;
   name?: string;
   workType?: 'Direct Service' | 'Advocacy' | 'Networking' | 'Nothing';
   organizationType?: 'Grassroots' | 'Statewide' | 'National';

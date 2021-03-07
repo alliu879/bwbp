@@ -1,39 +1,44 @@
 import { Button, Chip } from '@material-ui/core';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import { Organization } from '../../interfaces/organization';
 import styles from '../../styles/Organization.module.css';
 
-const orgs: Organization[] = [
-  {
-    name: 'Blueprint',
-    organizationType: 'National',
-    workType: 'Direct Service',
-    address: '123 Bancroft St., Berkeley, CA',
-    ein: '1234567890',
-    lgbtqDemographic: [],
-    raceDemographic: [],
-    ageDemographic: [],
-    missionStatement: 'asdasdfasdfsadfasdf',
-    shortHistory: 'asdfasdfasdfasdfasdf',
-  },
-  {
-    name: 'Redprint',
-    organizationType: 'Grassroots',
-    workType: 'Nothing',
-    address: '789 Blake St., Berkeley, CA',
-    ein: '0987654321',
-    lgbtqDemographic: [],
-    raceDemographic: [],
-    ageDemographic: [],
-    missionStatement: 'asdasdfasdfsadfasdf',
-    shortHistory: 'asdfasdfasdfasdfasdf',
-  },
-];
+// const orgs: Organization[] = [
+//   {
+//     name: 'Blueprint',
+//     organizationType: 'National',
+//     workType: 'Direct Service',
+//     address: '123 Bancroft St., Berkeley, CA',
+//     ein: '1234567890',
+//     lgbtqDemographic: [],
+//     raceDemographic: [],
+//     ageDemographic: [],
+//     missionStatement: 'asdasdfasdfsadfasdf',
+//     shortHistory: 'asdfasdfasdfasdfasdf',
+//   },
+//   {
+//     name: 'Redprint',
+//     organizationType: 'Grassroots',
+//     workType: 'Nothing',
+//     address: '789 Blake St., Berkeley, CA',
+//     ein: '0987654321',
+//     lgbtqDemographic: [],
+//     raceDemographic: [],
+//     ageDemographic: [],
+//     missionStatement: 'asdasdfasdfsadfasdf',
+//     shortHistory: 'asdfasdfasdfasdfasdf',
+//   },
+// ];
 
-const OrgProfile: React.FunctionComponent = () => {
-  const router = useRouter();
-  const org = orgs[Number(router.query.id)];
+type OrgProfileProps = {
+  org: Organization;
+};
+
+const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
+  // const router = useRouter();
+  // const org = orgs[Number(router.query.id)];
 
   const demographics = (category: string, groups: string[]): JSX.Element => {
     return (
@@ -134,3 +139,22 @@ const OrgProfile: React.FunctionComponent = () => {
 };
 
 export default OrgProfile;
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  try {
+    const id = params?.id as string | undefined;
+
+    if (!id) {
+      return { notFound: true };
+    }
+
+    const resp = await fetch('https://next-js-ws.glitch.me/orgs');
+    const orgs = await resp.json();
+
+    return {
+      props: { org: orgs[Number(id)] },
+    };
+  } catch (err) {
+    return { props: { errors: err.message } };
+  }
+};
