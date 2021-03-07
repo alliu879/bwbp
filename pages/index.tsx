@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import {
   Card,
   CardContent,
@@ -8,6 +9,8 @@ import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 
 const Home: React.FC = () => {
+  const router = useRouter();
+
   const orgs = [
     {
       id: 0,
@@ -33,7 +36,9 @@ const Home: React.FC = () => {
               {orgs.length !== 0 ? (
                 orgs.map((org) => (
                   <Card className={styles.card} key={org.id}>
-                    <CardActionArea>
+                    <CardActionArea
+                      onClick={() => router.push(`/orgs/${org.id}`)}
+                    >
                       <CardContent>
                         <Typography variant="h5">{org.name}</Typography>
                         <Typography variant="body2">
