@@ -60,18 +60,6 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
                 <b>EIN:</b> {org.ein}
               </p>
             )}
-            {/* Members */}
-            <h3 className={styles.infoHeader}>Members</h3>
-            <p className={styles.info}> Ace Chen, President</p>
-            <p className={styles.info}>Grace Ng, Internal Vice President</p>
-            <p className={styles.info}>Gibson Chu, External Vice President</p>
-            <p className={styles.info}>Erin Song, Vice President of Projects</p>
-            <p className={styles.info}>
-              Franco Monterrosa, Vice President of Technology
-            </p>
-            <p className={styles.info}>
-              Joelene Latief, Vice President of Design
-            </p>
           </div>
           <div className={styles.rightColumn}>
             <div className={styles.rightContent}>
@@ -90,7 +78,7 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
                 <p className={styles.infoContent}>{org.shortHistory}</p>
               )}
             </div>
-            {/* // TODO: your (Part 2b) edits in this vicinity */}
+            {/* // TODO: your (Part 2a/b) edits in this vicinity */}
             <div className={styles.nextButton}>
               <Button variant="contained" disableElevation>
                 Next
@@ -99,7 +87,7 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
           </div>
         </div>
         <div className={styles.orgImages}>
-          {/* TODO: your (Part 1) edits in this vicinity */}
+          {/* TODO: some of your (Part 1) edits in this vicinity */}
           <img
             src="https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
             alt="Organization"
