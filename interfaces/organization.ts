@@ -24,4 +24,5 @@ export type Organization = {
   ageDemographic: ('Children' | 'Teens' | 'Adults' | 'Seniors')[];
   missionStatement?: string;
   shortHistory?: string;
+  image?: string;
 };

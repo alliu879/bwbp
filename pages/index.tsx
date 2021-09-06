@@ -17,21 +17,6 @@ type HomeProps = {
 const Home: React.FC<HomeProps> = ({ orgs }) => {
   const router = useRouter();
 
-  // const orgs = [
-  //   {
-  //     id: 0,
-  //     name: 'Blueprint',
-  //     organizationType: 'National',
-  //     workType: 'Direct Service',
-  //   },
-  //   {
-  //     id: 1,
-  //     name: 'Redprint',
-  //     organizationType: 'Local',
-  //     workType: 'Nothing',
-  //   },
-  // ];
-
   return (
     <Layout>
       <div className={styles.pageFlex}>

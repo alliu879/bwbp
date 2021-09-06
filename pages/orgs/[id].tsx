@@ -5,40 +5,14 @@ import Layout from '../../components/Layout';
 import { Organization } from '../../interfaces/organization';
 import styles from '../../styles/Organization.module.css';
 
-// const orgs: Organization[] = [
-//   {
-//     name: 'Blueprint',
-//     organizationType: 'National',
-//     workType: 'Direct Service',
-//     address: '123 Bancroft St., Berkeley, CA',
-//     ein: '1234567890',
-//     lgbtqDemographic: [],
-//     raceDemographic: [],
-//     ageDemographic: [],
-//     missionStatement: 'asdasdfasdfsadfasdf',
-//     shortHistory: 'asdfasdfasdfasdfasdf',
-//   },
-//   {
-//     name: 'Redprint',
-//     organizationType: 'Grassroots',
-//     workType: 'Nothing',
-//     address: '789 Blake St., Berkeley, CA',
-//     ein: '0987654321',
-//     lgbtqDemographic: [],
-//     raceDemographic: [],
-//     ageDemographic: [],
-//     missionStatement: 'asdasdfasdfsadfasdf',
-//     shortHistory: 'asdfasdfasdfasdfasdf',
-//   },
-// ];
-
+// TODO: your (Part 2b) edits in this vicinity
 type OrgProfileProps = {
   org: Organization;
 };
 
+// TODO: your (Part 2b) edits in this vicinity
 const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
-  // const router = useRouter();
-  // const org = orgs[Number(router.query.id)];
+  const router = useRouter();
 
   const demographics = (category: string, groups: string[]): JSX.Element => {
     return (
@@ -58,21 +32,6 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
   return (
     <Layout title={`${org.name} Profile`}>
       <div className={styles.orgMargins}>
-        <div className={styles.orgImages}>
-          <img
-            src="https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
-            alt="Organization"
-          />
-        </div>
-        <div className={styles.editButton}>
-          <Button
-            variant="contained"
-            className={styles.editButtonStyles}
-            disableElevation
-          >
-            Edit
-          </Button>
-        </div>
         <div className={styles.titleColumns}>
           <div className={styles.leftColumn}>
             <h2 className={styles.Header}>{org.name}</h2>
@@ -103,7 +62,7 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
             )}
             {/* Members */}
             <h3 className={styles.infoHeader}>Members</h3>
-            <p className={styles.info}>Ace Chen, President</p>
+            <p className={styles.info}> Ace Chen, President</p>
             <p className={styles.info}>Grace Ng, Internal Vice President</p>
             <p className={styles.info}>Gibson Chu, External Vice President</p>
             <p className={styles.info}>Erin Song, Vice President of Projects</p>
@@ -131,7 +90,20 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
                 <p className={styles.infoContent}>{org.shortHistory}</p>
               )}
             </div>
+            {/* // TODO: your (Part 2b) edits in this vicinity */}
+            <div className={styles.nextButton}>
+              <Button variant="contained" disableElevation>
+                Next
+              </Button>
+            </div>
           </div>
+        </div>
+        <div className={styles.orgImages}>
+          {/* TODO: your (Part 1) edits in this vicinity */}
+          <img
+            src="https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
+            alt="Organization"
+          />
         </div>
       </div>
     </Layout>
@@ -151,6 +123,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const resp = await fetch('https://next-js-ws.glitch.me/orgs');
     const orgs = await resp.json();
 
+    // TODO: your (Part 2b) edits in this vicinity
     return {
       props: { org: orgs[Number(id)] },
     };
