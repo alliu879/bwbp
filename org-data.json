@@ -1,124 +1,110 @@
 [
-    {
-      "id": 0,
-      "name": "Blueprint",
-      "organizationType": "National",
-      "workType": "Direct Service",
-      "address": "123 Bancroft St., Berkeley, CA",
-      "ein": "1234567890",
-      "lgbtqDemographic": [
-        "gay",
-        "hey"
-      ],
-      "raceDemographic": [],
-      "ageDemographic": [],
-      "missionStatement": "sonjajohanson",
-      "shortHistory": "asdfasdfasdfasdfasdf",
-      "president": "for 0",
-      "ivp": "Joe Biden",
-      "vpt": "as",
-      "evp": "ba",
-      "vpp": "ca",
-      "vpd": "da",
-      "image": "https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
-    },
-    {
-      "id": 1,
-      "name": "Redprint",
-      "organizationType": "Grassroots",
-      "workType": "Nothing",
-      "address": "789 Blake St., Berkeley, CA",
-      "ein": "0987654321",
-      "lgbtqDemographic": [],
-      "raceDemographic": [],
-      "ageDemographic": [],
-      "missionStatement": "asdasdfasdfsadfasdf",
-      "shortHistory": "asdfasdfasdfasdfasdf",
-      "president": "Fred Kim",
-      "ivp": "Joe Biden",
-      "vpt": "a",
-      "evp": "b",
-      "vpp": "c",
-      "vpd": "d",
-      "image": "https://bioeng.berkeley.edu/wp-content/uploads/atkinson_feature.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Redprint2",
-      "organizationType": "Grassroots",
-      "workType": "Nothing",
-      "address": "789 Blake St., Berkeley, CA",
-      "ein": "0987654321",
-      "lgbtqDemographic": [],
-      "raceDemographic": [],
-      "ageDemographic": [],
-      "missionStatement": "asdasdfasdfsadfasdf",
-      "shortHistory": "asdfasdfasdfasdfasdf",
-      "president": "Fred Kim",
-      "ivp": "Joe Biden",
-      "vpt": "a",
-      "evp": "b",
-      "vpp": "c",
-      "vpd": "d",
-      "image": "https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
-    },
-    {
-      "id": 3,
-      "name": "Redprint3",
-      "organizationType": "Grassroots",
-      "workType": "Nothing",
-      "address": "789 Blake St., Berkeley, CA",
-      "ein": "0987654321",
-      "lgbtqDemographic": [],
-      "raceDemographic": [],
-      "ageDemographic": [],
-      "missionStatement": "asdasdfasdfsadfasdf",
-      "shortHistory": "asdfasdfasdfasdfasdf",
-      "president": "Fred Kim",
-      "ivp": "Joe Biden",
-      "vpt": "a",
-      "evp": "b",
-      "vpp": "c",
-      "vpd": "d",
-      "image": "https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
-    },
-    {
-      "id": 4,
-      "name": "Redprint4",
-      "organizationType": "Grassroots",
-      "workType": "Nothing",
-      "address": "789 Blake St., Berkeley, CA",
-      "ein": "0987654321",
-      "lgbtqDemographic": [],
-      "raceDemographic": [],
-      "ageDemographic": [],
-      "missionStatement": "asdasdfasdfsadfasdf",
-      "shortHistory": "asdfasdfasdfasdfasdf",
-      "president": "Fred Kim",
-      "ivp": "Joe Biden",
-      "vpt": "a",
-      "evp": "b",
-      "vpp": "c",
-      "vpd": "d",
-      "image": "https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
-    },
-    {
-      "id": 5,
-      "name": "Redprint",
-      "organizationType": "Grassroots",
-      "workType": "Nothing",
-      "address": "789 Blake St., Berkeley, CA",
-      "ein": "0987654321",
-      "lgbtqDemographic": [],
-      "raceDemographic": [],
-      "ageDemographic": [],
-      "missionStatement": "asdasdfasdfsadfasdf",
-      "shortHistory": "asdfasdfasdfasdfasdf",
-      "president": "Fred Kim",
-      "ivp": "Joe Biden",
-      "vpt": "a",
-      "evp": "b",
-      "vpp": "c",
-      "vpd": "d"
-    }
-  ]
+  {
+    "id": 0,
+    "name": "Oakland Genesis Soccer Club",
+    "organizationType": "National",
+    "workType": "Direct Service",
+    "address": "123 Bancroft St., Berkeley, CA",
+    "ein": "1234567890",
+    "lgbtqDemographic": [
+      "Other"
+    ],
+    "raceDemographic": [
+      "Other"
+    ],
+    "ageDemographic": [
+      "Children",
+      "Teens"
+    ],
+    "missionStatement": "For Oakland Genesis Soccer Club, soccer is a tool to empower, educate, and inspire Oakland's leaders of tomorrow. The core of our mission is inclusivity. We deliver cost-free youth development programming to Oakland youth from underserved communities, channeling their passion for soccer into personal growth, educational achievement and life success.",
+    "shortHistory": "Oakland Genesis Soccer Club is a Bay Area based nonprofit that provides socially and economically disadvantaged youth with free academic support and athletic programs. Their three main services involve free access to club soccer programs, free academic support and college advising to players, and free transportation to and from team practices and games.",
+    "image": "https://calblueprint.org/assets/projects/ogsc-83990cd56c27fbba7b572838742e4727833086bbdd06cb2f510a9b30ac2b4d54.png",
+    "image2": "https://bioeng.berkeley.edu/wp-content/uploads/atkinson_feature.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Mee Panyar",
+    "organizationType": "Grassroots",
+    "workType": "Advocacy",
+    "address": "789 Blake St., Oakland, CA",
+    "ein": "0987654321",
+    "lgbtqDemographic": [],
+    "raceDemographic": [],
+    "ageDemographic": [
+      "Teens",
+      "Adults"
+    ],
+    "missionStatement": "1 billion people currently live without access to reliable electricity. Mee Panyar’s dedicated approach to technical capacity building and community mobilization makes sure that they not only get access, but keep it, through sustainable operations & maintenance. ",
+    "shortHistory": "Mee Panyar supports rural communities in Myanmar in the operation and maintenance of decentralized solar mini-grids that provide reliable, sustainable energy. This work aims to not only help rural electricians transition from diesel to solar (reducing carbon emissions by 60% and electricity prices by 50%) but to ensure long-term maintenance and proper operation of these new systems through the provision of formal education and support to rural electricians.",
+    "image": "https://calblueprint.org/assets/projects/meepanyar-6a19847673175f9c589bb18b855ff549ed82e017a1111f4bc6c109f3526c46aa.png"
+  },
+  {
+    "id": 2,
+    "name": "We Care Solar",
+    "organizationType": "Networking",
+    "workType": "Nothing",
+    "address": "2303 Forrest St., Berkeley, CA",
+    "ein": "0987658321",
+    "lgbtqDemographic": [],
+    "raceDemographic": [
+      "Other"
+    ],
+    "ageDemographic": [
+      "adults"
+    ],
+    "missionStatement": "It is hard to conduct a delivery at night with a kerosene lamp. It is hot, and does not even provide sufficient light, let alone a delivery. It is even harder to suture a patient without sufficient light.",
+    "shortHistory": "We Care Solar is a nonprofit saving lives in childbirth through the design, delivery, and installation of rugged, compact solar suitcases. Hundreds of thousands of health facilities lack reliable electricity, and the consequences are often tragic. The organization works closely with partners such as the Ministries of Health, UN agencies, and international non-government organizations to promote clean energy for safe motherhood.",
+    "image": "https://calblueprint.org/assets/projects/wecaresolar-46421c07e8ccbba42ca75ec8e7eee3c00cd557cb11b541bc7045bbbc13d91555.png"
+  },
+  {
+    "id": 3,
+    "name": "Kamehameha Schools",
+    "organizationType": "Direct Service",
+    "workType": "Nothing",
+    "address": "2440 Way, Hawaii, CA",
+    "ein": "0987653321",
+    "lgbtqDemographic": [],
+    "raceDemographic": [
+      "Asian",
+      "Pacific Islander"
+    ],
+    "ageDemographic": [],
+    "missionStatement": "When Princess Bernice Pauahi Bishop penned her last will and testament, she did so with the empowerment of her people in mind. For over 130 years we have remained true to our founder’s vision and continue to cultivate ‘ōiwi leaders strong in Native Hawaiian identity that go on to serve their families and communities in an ever-changing world.",
+    "shortHistory": "Kamehameha Schools (KS) is more than just a network of schools, but an active player in shaping the socio-economic landscape in the Hawaiian islands. KS leverages it’s massive land-ownership in Hawai’i to fund early education programs, support agricultural endeavors, operate retail spaces, and more. KS is a complex conglomerate — a mix of global diversified financial assets and an educational network for native Hawaiians.",
+    "image": "https://calblueprint.org/assets/projects/ks-fca2ca97e981d62e65cd692889f71108954fea1a9942f566843af227a0d53f9a.png",
+    "image2": "https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
+  },
+  {
+    "id": 4,
+    "name": "1951 Coffee Company",
+    "organizationType": "Grassroots",
+    "workType": "Nothing",
+    "address": "Bancroft Ave., Berkeley, CA",
+    "ein": "0487654321",
+    "lgbtqDemographic": [
+      "Other"
+    ],
+    "raceDemographic": [],
+    "ageDemographic": [
+      "Children"
+    ],
+    "missionStatement": " By purchasing a cup of coffee at 1951 Coffee you are providing life an altering opportunity for a refugee living in your community. ",
+    "shortHistory": "1951 Coffee is a non-profit coffee organization that provides job training and employment to refugees, asylums, and special immigrant visa holders in the Bay Area. Many newly resettled refugees struggle to attain living-wage jobs — 1951 Coffees hopes to provide opportunity amongst lacking resources and language barriers through its barista training program.",
+    "image": "https://calblueprint.org/assets/projects/1951-64736111653afb08d1bc4504d788e41c85d15fbb89b4fbcab9aeb9fc27b66885.png"
+  },
+  {
+    "id": 5,
+    "name": "DC Central Kitchen",
+    "organizationType": "Direct Service",
+    "workType": "Nothing",
+    "address": "301 Cactus Avenue., Las Vegas, CA",
+    "ein": "0987664321",
+    "lgbtqDemographic": [],
+    "raceDemographic": [],
+    "ageDemographic": [
+      "Teens"
+    ],
+    "missionStatement": "Our mission is to use food as a tool to strengthen bodies, empower minds, and build communities.",
+    "shortHistory": "DC Central Kitchen develops innovative social ventures targeting the cycle of hunger and poverty. They create opportunities for meaningful careers, expand access to healthy food, and test innovative solutions to systemic failures. DC Central Kitchen's Healthy Corners initiative sustainably expands healthy food access in DC’s food deserts by delivering fresh produce at discount prices to corner stores in DC’s low-income communities."
+  }
+]
