@@ -5,13 +5,16 @@ import Layout from '../../components/Layout';
 import { Organization } from '../../interfaces/organization';
 import styles from '../../styles/Organization.module.css';
 
-// TODO: your (Part 2b) edits in this vicinity
 type OrgProfileProps = {
   org: Organization;
+  totalOrgs: number;
 };
 
-// TODO: your (Part 2b) edits in this vicinity
-const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
+const imgStyle = {
+  width: '100%'
+};
+
+const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org, totalOrgs }) => {
   const router = useRouter();
 
   const demographics = (category: string, groups: string[]): JSX.Element => {
@@ -32,6 +35,20 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
   return (
     <Layout title={`${org.name} Profile`}>
       <div className={styles.orgMargins}>
+        <div className={styles.orgImages}>
+          <img
+            className={org.image2 != null ? styles.twoImg : styles.oneImg}
+            src={org.image != null ? org.image : "https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"}
+            alt="Organization"
+          />
+          {org.image2 != null &&
+              <img
+              className={styles.twoImg}
+              src={org.image2}
+              alt="Organization"
+              />
+          }
+        </div> 
         <div className={styles.titleColumns}>
           <div className={styles.leftColumn}>
             <h2 className={styles.Header}>{org.name}</h2>
@@ -78,20 +95,12 @@ const OrgProfile: React.FunctionComponent<OrgProfileProps> = ({ org }) => {
                 <p className={styles.infoContent}>{org.shortHistory}</p>
               )}
             </div>
-            {/* // TODO: your (Part 2a/b) edits in this vicinity */}
             <div className={styles.nextButton}>
-              <Button variant="contained" disableElevation>
+              <Button onClick={() => router.push(`/orgs/${(org.id + 1) % totalOrgs}`)}  variant="contained" disableElevation>
                 Next
               </Button>
             </div>
           </div>
-        </div>
-        <div className={styles.orgImages}>
-          {/* TODO: some of your (Part 1) edits in this vicinity */}
-          <img
-            src="https://1mktxg24rspz19foqjixu9rl-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/eia-berkeley-Cover.png"
-            alt="Organization"
-          />
         </div>
       </div>
     </Layout>
@@ -111,11 +120,11 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const resp = await fetch('https://next-js-ws.glitch.me/orgs');
     const orgs = await resp.json();
 
-    // TODO: your (Part 2b) edits in this vicinity
     return {
-      props: { org: orgs[Number(id)] },
+      props: { org: orgs[Number(id)], totalOrgs: orgs.length },
     };
   } catch (err) {
     return { props: { errors: err.message } };
   }
 };
+

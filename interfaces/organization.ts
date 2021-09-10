@@ -25,4 +25,5 @@ export type Organization = {
   missionStatement?: string;
   shortHistory?: string;
   image?: string;
+  image2?: string;
 };
